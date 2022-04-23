@@ -6,7 +6,6 @@ const notesStored = require('./db/db.json');
 const express = require('express');
 // requiing the pre-built-in node library to be able to search for files and folders
 const path = require('path');
-
 // rename for ease
 const app = express();
 

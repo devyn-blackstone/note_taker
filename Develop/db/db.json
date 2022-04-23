@@ -1,10 +1,14 @@
 [
 	{
-		"title": "Test Title",
-		"text": "Test text"
+		"title": "Monday To-Do Items",
+		"text": "Dishes \nVacuum"
 	},
 	{
-		"title": "Title",
-		"text": "note\n"
+		"title": "Upcoming Events",
+		"text": "Concert\nGame\nSoccer game"
+	},
+	{
+		"title": "Remember To Do These!",
+		"text": "Brush your teeth"
 	}
 ]
