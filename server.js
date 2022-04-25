@@ -1,7 +1,7 @@
 // requiring the pre-builtin node library to write file or file manipulation
 const fs = require('fs');
 // requiring the db.json file
-const notesStored = require('./db/db.json');
+const notesStored = require('./Develop/db/db.json');
 // requring the node library that creates the server and routes
 const express = require('express');
 // requiing the pre-built-in node library to be able to search for files and folders
@@ -28,16 +28,16 @@ app.post("/api/notes", (req, res) => {
     console.log(req.body);
     notesStored.push(req.body);
     // adds spacing
-    fs.writeFileSync("./db/db.json", JSON.stringify(notesStored, null, "\t"));
+    fs.writeFileSync("./Develop/db/db.json", JSON.stringify(notesStored, null, "\t"));
     res.json(notesStored);
 });
 
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/notes.html"))
+    res.sendFile(path.join(__dirname, "./Develop/public/notes.html"))
 });
 
 app.get('/*', (req,res) => {
-    res.sendFile(path.join(__dirname, "./public/index.html"))
+    res.sendFile(path.join(__dirname, "./Develop/public/index.html"))
 })
 
 app.listen(PORT, () => {
